@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1><center>SPEECH TO TEXT</center></h1>
+    </head>
+        <body style="background-color: bisque;">
+            <center>
+            <div>
+                <input id="input" type="text">
+                <button onclick = "speak()">SPEAK</button>
+                
+            </div>
+            <script>
+
+                <!-- This line defines a new function named speak. 
+                Functions in JavaScript are reusable blocks of code that perform a specific task. -->
+                function speak(){
+
+                    var text = document.getElementById("input").value;
+                    var utterance = new SpeechSynthesisUtterance(text);
+                    speechSynthesis.speak(utterance);
+                }
+
+            </script>
+            </center>
+        </body>
+    
+</html>
+<!-- 
+This line retrieves the value of an HTML element with the id attribute set to "input".
+document.getElementById("input") selects the HTML element with the ID input.
+.value gets the current value of this element, which is typically what the user has typed into an input field.
+The retrieved text is stored in the variable text. -->
